@@ -11,9 +11,10 @@ class ResultSearch
   end
 
   def checkout
-    all('.icon-cart')[0].hover
-    binding.pry
-    all('.info-products-checkout-full p')[0].text == @name_afterchoose
+    @itenscart = '.icon-cart'
+    all(@itenscart)[0].hover
+    all('.edit-checkout-full')[0].click
+    all('.BasketItemProduct-info-title p')[0].text == @name_afterchoose
   end
 
   def choose_product
