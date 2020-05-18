@@ -18,6 +18,7 @@ class ResultSearch
 
   def choose_product
     title_correct?
+
     all('.nm-product-img')[2].click
     @name_afterchoose = find('.header-product__title').text
     find('.button__buy-product-detail').click
